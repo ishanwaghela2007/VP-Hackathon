@@ -1,17 +1,20 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import UserLayout from './components/UserLayout';
+import UserLayout from './UserLayout';
+import Home from './pages/Home/Home';
+import Login from "./pages/Login/Login";
 
 const App = () => {
   return (
     <Router>
-      <UserLayout>
+      
         <Routes>
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} /> */}
+         <Route path="/" element={<Home />} />
+         <Route path="/login" element={<Login />} />
+          
         </Routes>
-      </UserLayout>
+    
     </Router>
   );
 };

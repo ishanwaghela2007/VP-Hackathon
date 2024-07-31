@@ -9,10 +9,10 @@ const UserLayout = () => {
   return (
     <>
       <UserNavbar />
-      <ScrollProgressBar />
-      <Outlet />
+      {/* <ScrollProgressBar /> */}
+      {/* <Outlet /> */}
       <Footer />
-      <GoToTop />
+      {/* <GoToTop /> */}
     
     </>
   );
