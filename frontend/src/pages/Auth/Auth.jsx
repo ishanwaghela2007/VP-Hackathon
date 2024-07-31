@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import './Auth.css'; // Import CSS for flip animation
+import './Auth.css'; 
 
 function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex items-center justify-center  p-4 bg-[url(assets/bg.svg)] bg-cover bg-center">
       <div className="w-full max-w-md mx-auto perspective-1000 mt-[-55vh]">
         {/* Flip Container */}
         <div className="w-full h-full relative transform-style-preserve-3d transition-transform duration-500" style={{ transform: `rotateY(${isSignUp ? '180deg' : '0deg'})` }}>
@@ -41,18 +40,18 @@ function Auth() {
                       id="defaultCheck1"
                       className="form-checkbox"
                     />
-                    <span className="ml-2 text-gray-700">Remember me</span>
+                    <span className="ml-2 text-white">Remember me</span>
                   </label>
-                  <a href="#" className="text-blue-500 hover:underline">Forgot Password?</a>
+                  <a href="#" className="text-white hover:underline">Forgot Password?</a>
                 </div>
                 <button className="w-full py-2 bg-gradient-to-r from-pink-600 to-red-400 text-white rounded-full shadow-md hover:bg-gradient-to-l transition-colors">
                   Login
                 </button>
-                <p className="text-center mt-5">
+                <p className="text-center mt-5 text-white">
                   Don't have an account?{' '}
                   <button
                     onClick={() => setIsSignUp(true)}
-                    className="text-blue-500 hover:underline"
+                    className="text-white hover:underline"
                   >
                     Create your account
                   </button>
@@ -96,11 +95,11 @@ function Auth() {
                 <button className="w-full py-2 bg-gradient-to-r from-pink-600 to-red-400 text-white rounded-full shadow-md hover:bg-gradient-to-l transition-colors">
                   Sign Up
                 </button>
-                <p className="text-center mt-5">
+                <p className="text-center mt-5 text-white">
                   Already have an account?{' '}
                   <button
                     onClick={() => setIsSignUp(false)}
-                    className="text-blue-500 hover:underline"
+                    className="text-white hover:underline"
                   >
                     Login
                   </button>
