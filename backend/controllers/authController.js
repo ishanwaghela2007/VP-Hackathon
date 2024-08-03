@@ -1,6 +1,6 @@
 import User from "../models/authModel.js";
 import bcrypt from "bcryptjs";
-import { authenticateToken } from "../utils/generateToken.js";
+import { generateToken } from "../utils/generateToken.js";
 export const signupController = async (req, res) => {
   try {
     const { username, email, fullName, password } = req.body;
@@ -26,10 +26,15 @@ export const signupController = async (req, res) => {
       fullName,
       password: hash,
     });
-    const token = authenticateToken(username,email);
-    if(token){
-
-        res.cookie("Access_token", token, { httpOnly: true, maxAge: 15 * 24 * 60 * 60 * 1000 });
+    const token = generateToken(username);
+    if (token) {
+      res.cookie("Access_token", token, {
+        httpOnly: true,
+        maxAge: 15 * 24 * 60 * 60 * 1000,
+      });
+    }
+    else{
+      res.status(401).json({ message: "Authentication failed" });
     }
 
     res.status(201).json(newUser);
@@ -37,5 +42,36 @@ export const signupController = async (req, res) => {
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ message: "Server error" });
+  }
+};
+export const loginController = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    if (!username || !password) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+    const user = await User.findOne({ username: username }).select("+password");
+    if (!user) {
+      return res.status(400).json({ message: "User not found" });
+    }
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid credentials" });
+    }
+    const token = generateToken(user.username);
+    if (token) {
+      res.cookie("Access_token", token, {
+        httpOnly: true,
+        maxAge: 15 * 24 * 60 * 60 * 1000,
+      });
+    }
+    else{
+      res.status(401).json({ message: "Authentication failed" });
+    }
+
+    res.json({ message: "Login Successful" , token:token });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ message: "Server error In LoginController" });
   }
 };
