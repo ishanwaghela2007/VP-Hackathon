@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import './Auth.css'; 
+import './Auth.css';
 
 function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center  p-4 bg-[url(assets/bg.svg)] bg-cover bg-center">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[url(assets/bg.svg)] bg-cover bg-center">
       <div className="w-full max-w-md mx-auto perspective-1000 mt-[-55vh]">
         {/* Flip Container */}
-        <div className="w-full h-full relative transform-style-preserve-3d transition-transform duration-500" style={{ transform: `rotateY(${isSignUp ? '180deg' : '0deg'})` }}>
-          
+        <div className={`flip-container ${isSignUp ? 'rotate-y-180' : ''}`}>
           {/* Login Form */}
           <div className="absolute w-full h-full bg-white shadow-lg rounded-lg backface-hidden">
             <div className="flex flex-col items-center p-6">
@@ -50,6 +49,7 @@ function Auth() {
                 <p className="text-center mt-5 text-white">
                   Don't have an account?{' '}
                   <button
+                    type="button"
                     onClick={() => setIsSignUp(true)}
                     className="text-white hover:underline"
                   >
@@ -77,7 +77,7 @@ function Auth() {
                 <div className="relative mb-4">
                   <input
                     type="text"
-                    id="username"
+                    id="username-signup"
                     placeholder="Username"
                     className="w-full p-3 border-b-2 border-gray-300 rounded-none shadow-sm focus:border-gray-400"
                   />
@@ -86,7 +86,7 @@ function Auth() {
                 <div className="relative mb-4">
                   <input
                     type="password"
-                    id="password"
+                    id="password-signup"
                     placeholder="Password"
                     className="w-full p-3 border-b-2 border-gray-300 rounded-none shadow-sm focus:border-gray-400"
                   />
@@ -98,6 +98,7 @@ function Auth() {
                 <p className="text-center mt-5 text-white">
                   Already have an account?{' '}
                   <button
+                    type="button"
                     onClick={() => setIsSignUp(false)}
                     className="text-white hover:underline"
                   >
