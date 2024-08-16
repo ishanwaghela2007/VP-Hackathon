@@ -2,6 +2,7 @@
 import React from 'react';
 import {useState} from 'react'
 import { Link } from 'react-router-dom';
+import Footer from "../../components/Footer/Footer.jsx";
 const Home = () => {
   const [user,setuser]=useState(120)
   const [client,setclient]=useState(100)
@@ -73,6 +74,9 @@ const Home = () => {
   <h2 className="text-center text-lg font-medium">Client</h2>
 </div>
 
+      </>
+      <>
+      <Footer/>
       </>
     </div>
 

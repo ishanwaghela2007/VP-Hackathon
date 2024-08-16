@@ -38,7 +38,7 @@ function Auth() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, username, password }), 
+        body: JSON.stringify({ fullName:name, email, username, password }), 
       });
 console.log(response);
 
