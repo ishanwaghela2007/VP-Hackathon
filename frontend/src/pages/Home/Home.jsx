@@ -4,6 +4,7 @@ import {useState} from 'react'
 import { Link } from 'react-router-dom';
 const Home = () => {
   const [user,setuser]=useState(120)
+  const [client,setclient]=useState(100)
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navbar */}
@@ -56,73 +57,22 @@ const Home = () => {
       </div>
       </>
       <>
-      
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', maxWidth: '800px', margin: 'auto', }} className=''>
-      <header style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <h1 style={{ fontSize: '2.5em' }}>Our Mission</h1>
-        <h2 style={{ fontSize: '1.5em', color: '#555' }}>Empowering Active and Healthy Lifestyles for Seniors</h2>
-      </header>
-
-      <section style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '1.5em', marginBottom: '10px' }}>Introduction</h3>
-        <p>
-          Welcome to FitLife! We are dedicated to helping older adults lead active, fulfilling lives through personalized fitness programs designed with their unique needs in mind. Our mission is to empower seniors to stay strong, flexible, and confident as they age.
-        </p>
-      </section>
-
-      <section style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '1.5em', marginBottom: '10px' }}>Our Story</h3>
-        <p>
-          Founded by a team of fitness enthusiasts and health professionals, FitLife was created with the belief that fitness is a key component to a vibrant and joyful life at any age. Our founders have extensive experience in senior fitness and wellness, and they bring a wealth of knowledge to our programs.
-        </p>
-      </section>
-
-      <section style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '1.5em', marginBottom: '10px' }}>Meet the Team</h3>
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
-          <li style={{ marginBottom: '10px' }}>
-            <strong>Hitesh - Founder & CEO:</strong> With a background in geriatric fitness and a passion for promoting healthy aging, Hitesh leads our team with dedication and expertise.
-          </li>
-          <li style={{ marginBottom: '10px' }}>
-            <strong>Isha - Fitness Coach:</strong> Our certified fitness coach specializing in senior fitness, Isha designs our programs to ensure they are safe and effective.
-          </li>
-          <li style={{ marginBottom: '10px' }}>
-            <strong>Aayush - Wellness Specialist:</strong> Aayush provides valuable insights into nutrition and overall well-being, helping to complement our fitness programs.
-          </li>
-          <li style={{ marginBottom: '10px' }}>
-            <strong>Harsh - Program Coordinator:</strong> Harsh ensures that our fitness programs are well-coordinated and meet the needs of our clients.
-          </li>
-        </ul>
-      </section>
-
-      <section style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '1.5em', marginBottom: '10px' }}>Our Approach</h3>
-        <ul>
-          <li>Personalized Fitness Plans: Tailored to fit individual needs and abilities.</li>
-          <li>Gentle and Safe Workouts: Designed to be effective while minimizing the risk of injury.</li>
-          <li>Holistic Wellness: Incorporating nutrition advice and mental well-being into our programs.</li>
-        </ul>
-      </section>
-
-      <section style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '1.5em', marginBottom: '10px' }}>Testimonials</h3>
-        <blockquote style={{ borderLeft: '3px solid #ddd', paddingLeft: '20px', marginBottom: '10px' }}>
-          <p>"I never thought I could feel this strong again. FitLife has truly changed my life." – Hardik</p>
-        </blockquote>
-        <blockquote style={{ borderLeft: '3px solid #ddd', paddingLeft: '20px' }}>
-          <p>"The personalized approach and supportive community make all the difference." – rohit</p>
-        </blockquote>
-      </section>
-    </div>
+      <div className="w-80 h-auto bg-white text-black p-6 border border-transparent rounded-xl shadow-xl mx-auto transform hover:scale-105 transition-transform duration-300">
+  <img className="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-white shadow-lg" src="https://static.vecteezy.com/system/resources/previews/007/296/447/original/user-icon-in-flat-style-person-icon-client-symbol-vector.jpg" alt="user icon"/>
+  
+  <p className="text-center text-2xl font-semibold mb-2">{user}k</p>
+  <h2 className="text-center text-lg font-medium">Active Users within 30 days</h2>
+</div>
 
       </>
       <>
-      <h1 className='text-center '>Active Users</h1>
-      <p className='text-center'>{user}K</p><br/>
-      <p className='text-center'>Active users are users who have logged in within the last 30 days.</p>
-      
-      </>
-      <>
+      <div className="w-80 h-auto bg-white text-black p-6 border border-transparent rounded-xl shadow-xl mx-auto transform hover:scale-105 transition-transform duration-300">
+  <img className="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-white shadow-lg" src="https://static.vecteezy.com/system/resources/previews/007/296/447/original/user-icon-in-flat-style-person-icon-client-symbol-vector.jpg" alt="client icon"/>
+  
+  <p className="text-center text-2xl font-semibold mb-2">{client}k</p>
+  <h2 className="text-center text-lg font-medium">Client</h2>
+</div>
+
       </>
     </div>
 
