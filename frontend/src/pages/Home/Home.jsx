@@ -1,8 +1,9 @@
 // Import the necessary libraries
 import React from 'react';
 import {useState} from 'react'
+import { Link } from 'react-router-dom';
 const Home = () => {
-  const [user,setuser]=useState(500)
+  const [user,setuser]=useState(120)
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navbar */}
@@ -17,21 +18,21 @@ const Home = () => {
             Fitlife
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-800 hover:text-gray-600">
+            <Link to="/" className="text-gray-800 hover:text-gray-600">
               Home
-            </a>
-            <a href="#" className="text-gray-800 hover:text-gray-600">
+            </Link>
+            <Link to="/profile" className="text-gray-800 hover:text-gray-600">
               Profile
-            </a>
-            <a href="#" className="text-gray-800 hover:text-gray-600">
+            </Link>
+            <Link to="#" className="text-gray-800 hover:text-gray-600">
               Community
-            </a>
-            <a href="#" className="text-gray-800 hover:text-gray-600">
+            </Link>
+            <Link to="#" className="text-gray-800 hover:text-gray-600">
               Become Member
-            </a>
-            <a href="#" className="text-gray-800 hover:text-gray-600">
+            </Link>
+            <Link to="/login" className="text-gray-800 hover:text-gray-600">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -39,7 +40,7 @@ const Home = () => {
       {/* Main Content */}
       <>
       <div
-        className="container mx-auto px-6 py-12 bg-cover bg-center h-80"
+        className="container mx-auto px-6 py-12 bg-cover bg-center h-80 bg-"
         style={{
           backgroundImage:
             "url(https://t3.ftcdn.net/jpg/04/29/35/62/360_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg)",
@@ -56,7 +57,7 @@ const Home = () => {
       </>
       <>
       
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', maxWidth: '800px', margin: 'auto' }}>
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', maxWidth: '800px', margin: 'auto', }} className=''>
       <header style={{ textAlign: 'center', marginBottom: '30px' }}>
         <h1 style={{ fontSize: '2.5em' }}>Our Mission</h1>
         <h2 style={{ fontSize: '1.5em', color: '#555' }}>Empowering Active and Healthy Lifestyles for Seniors</h2>
@@ -112,20 +113,16 @@ const Home = () => {
           <p>"The personalized approach and supportive community make all the difference." – rohit</p>
         </blockquote>
       </section>
-
-      <footer style={{ textAlign: 'center', marginTop: '30px' }}>
-        <h3 style={{ fontSize: '1.5em', marginBottom: '10px' }}>Join Us</h3>
-        <p>Discover how our programs can help you lead a more active and fulfilling life.</p>
-        <a href="/contact" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '5px' }}>Contact Us</a>
-        <p style={{ marginTop: '10px' }}>Contact Us: 4567890456 | fitlife@gmail.com| fitlife</p>
-      </footer>
     </div>
 
       </>
       <>
-      <h1 className='text-center'>Active Users</h1>
-      <p>{user}K</p><br/>
-      <p>Active users are users who have logged in within the last 30 days.</p>
+      <h1 className='text-center '>Active Users</h1>
+      <p className='text-center'>{user}K</p><br/>
+      <p className='text-center'>Active users are users who have logged in within the last 30 days.</p>
+      
+      </>
+      <>
       </>
     </div>
 

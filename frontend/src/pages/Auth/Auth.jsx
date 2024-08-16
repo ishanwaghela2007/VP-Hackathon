@@ -5,14 +5,14 @@ function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-[url(assets/bg.svg)] bg-cover bg-center">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[url(https://img.freepik.com/free-psd/fitness-items-background_23-2150154416.jpg)] bg-cover bg-center">
       <div className="w-full max-w-md mx-auto perspective-1000 mt-[-55vh]">
         {/* Flip Container */}
         <div className={`flip-container ${isSignUp ? 'rotate-y-180' : ''}`}>
           {/* Login Form */}
           <div className="absolute w-full h-full bg-white shadow-lg rounded-lg backface-hidden">
             <div className="flex flex-col items-center p-6">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-6">Login</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Login</h1>
               <form className="w-full">
                 <div className="relative mb-4">
                   <input
@@ -63,7 +63,7 @@ function Auth() {
           {/* Sign Up Form */}
           <div className="absolute w-full h-full bg-white shadow-lg rounded-lg backface-hidden rotate-y-180">
             <div className="flex flex-col items-center p-6">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-6">Sign Up</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Sign Up</h1>
               <form className="w-full">
                 <div className="relative mb-4">
                   <input

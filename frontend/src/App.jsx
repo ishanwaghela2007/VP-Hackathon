@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Auth from "./pages/Auth/Auth";
 import Profile from "./pages/Profile/Profile";
 import Error from './pages/Error/Error';
+import FAQ from './pages/Help/FAQ';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
          <Route path="*" element={<Error />} />
          <Route path="/login" element={<Auth />} />
          <Route path="/profile" element={<Profile />} />
+         <Route path="/help" element={<FAQ/>} />
         </Routes>
     
     </Router>
