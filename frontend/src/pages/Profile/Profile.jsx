@@ -30,7 +30,7 @@ function ProfilePage() {
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-white text-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* <header className="flex justify-between items-center py-4">
           <h1 className="text-2xl font-bold">Profile</h1>

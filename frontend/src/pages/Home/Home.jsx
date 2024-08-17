@@ -27,11 +27,11 @@ const Home = () => {
             <Link to="/profile" className="text-gray-800 hover:text-gray-600">
               Profile
             </Link>
-            <Link to="#" className="text-gray-800 hover:text-gray-600">
+            <Link to="/Community" className="text-gray-800 hover:text-gray-600">
               Community
             </Link>
-            <Link to="#" className="text-gray-800 hover:text-gray-600">
-              Become Member
+            <Link to="/tutor" className="text-gray-800 hover:text-gray-600">
+              Yoga Series
             </Link>
             <Link to="/login" className="text-gray-800 hover:text-gray-600">
               Login
@@ -66,7 +66,7 @@ const Home = () => {
       </>
       <>
       <div className="w-80 h-auto bg-white text-black p-6 border border-transparent rounded-xl shadow-xl mx-auto transform hover:scale-105 transition-transform duration-300">
-  <img className="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-white shadow-lg" src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="user icon"/>
+  <img className="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-white shadow-lg " src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="user icon"/>
   
   <p className="text-center text-2xl font-semibold mb-2">{user}k</p>
   <h2 className="text-center text-lg font-medium">Active Users within 30 days</h2>
@@ -84,7 +84,7 @@ const Home = () => {
       </>
       <>
       <div className="w-80 h-auto bg-white text-black p-6 border border-transparent rounded-xl shadow-xl mx-auto transform hover:scale-105 transition-transform duration-300">
-  <img className="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-white shadow-lg" src="https://static.vecteezy.com/system/resources/previews/007/296/447/original/user-icon-in-flat-style-person-icon-client-symbol-vector.jpg" alt="client icon"/>
+  <img className="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-white shadow-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8E8UOrNbWngA9xfJH768494y1HwoVT1TeVQ&s" alt="client icon"/>
   
   <p className="text-center text-2xl font-semibold mb-2">{trade}k</p>
   <h2 className="text-center text-lg font-medium">Trade accros world</h2>
