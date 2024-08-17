@@ -2,7 +2,7 @@
 import React from 'react';
 import {useState} from 'react'
 import { Link } from 'react-router-dom';
-import Footer from "../../components/Footer/Footer.jsx";
+
 const Home = () => {
   const [user,setuser]=useState(120)
   const [client,setclient]=useState(100)
@@ -42,14 +42,15 @@ const Home = () => {
       {/* Main Content */}
       <>
       <div
-        className="container mx-auto px-6 py-12 bg-cover bg-center h-80 bg-"
+        className="container mx-auto px-6 py-12 bg-cover bg-center h-screen bg-transparent"
         style={{
           backgroundImage:
-            "url(https://t3.ftcdn.net/jpg/04/29/35/62/360_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg)",
+            "url(https://th.bing.com/th/id/OIG3.EzZ68hwdcGqErO3SwkJT?pid=ImgGn)",
+
         }}
       >
         <div className="px-6 py-6 mt-6 text-center">
-          <h1 className="text-3xl font-bold text-white">
+          <h1 className="text-3xl font-bold text-black">
             Welcome to
             <span className="flex justify-center items-center"></span>
             Fitlife
@@ -76,7 +77,7 @@ const Home = () => {
 
       </>
       <>
-      <Footer/>
+      {/* <Footer/> */}
       </>
     </div>
 
